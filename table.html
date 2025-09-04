@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Table</title>
+</head>
+<body>
+
+  <table id="myTable" border="1"></table>
+
+  <script>
+    const data = [
+      { name: 'John', age: 28, city: 'New York' },
+      { name: 'Jane', age: 22, city: 'London' },
+      { name: 'Sam', age: 33, city: 'Sydney' }
+    ];
+
+   
+    let table = document.getElementById('myTable');
+    
+    table.innerHTML = '<tr><th>Name</th><th>Age</th><th>City</th></tr>';
+    
+   
+    data.forEach(item => {
+      table.innerHTML += `<tr><td>${item.name}</td><td>${item.age}</td><td>${item.city}</td></tr>`;
+    });
+  </script>
+
+</body>
+</html>
