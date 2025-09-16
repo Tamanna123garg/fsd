@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .counter-box {
+      width: 300px;
+      height: 300px;
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: red;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .counter {
+      font-size: 40px;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      width: 60px;
+      height: 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background:black;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="counter-box">
+    <div class="logo-title">
+      <div class="logo">L</div>
+      
+      <h2>Counter App</h2>
+    </div>
+    <div class="counter" id="counter">0</div>
+    <div class="buttons">
+      <button onclick="decrease()">-</button>
+      <button onclick="increase()">+</button>
+    </div>
+  </div>
+
+  <script>
+    let count = 0;
+    const counterElement = document.getElementById('counter');
+
+    function increase() {
+      if (count >= 10) {
+        alert("Maximum limit");
+      } else {
+        count++;
+        counterElement.innerText = count;
+      }
+    }
+
+    function decrease() {
+      if (count <= 0) {
+        alert("Minimum limit");
+      } else {
+        count--;
+        counterElement.innerText = count;
+      }
+    }
+  </script>
+</body>
+</html>
