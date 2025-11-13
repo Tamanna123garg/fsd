@@ -1,0 +1,21 @@
+*{
+    box_sizing: border-box;
+
+}
+.container{
+display : flex;
+flex-flow: wrap row;
+flex-direction : row-reverse;
+gap: 5px;
+flex-wrap: wrap;
+justify-content: space-around;
+align-content: flex-start;
+
+}
+
+.box{
+    height:500px;
+    width:80px;
+    border:2px solid red;
+    background-color: blueviolet;
+}
